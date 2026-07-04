@@ -9,6 +9,7 @@
 
 ## Completed
 
+- [x] L • P1 • Master-detail redesign: left rail (writings-by-year + projects accordion) + reading pane; revised bio (Xanthakita origin + family); real README; merged to main; published public repo xanthakita/xanthakita-site tagged `showcase` — see XAN-004 (not yet deployed to prod)
 - [x] S • P1 • Scaffold repo (git, TODO.md, SessionStart hook, README, .gitignore)
 - [x] S • P1 • Define the project: personal landing + GitHub `showcase` topic-driven projects site (Next.js/Vercel, dark theme)
 - [x] XL • P1 • Build + ship xanthakita.com v1 (7 TDD tasks; Vercel deploy; email-safe GoDaddy DNS; live at https://xanthakita.com) — see XAN-001
