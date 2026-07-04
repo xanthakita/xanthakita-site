@@ -13,8 +13,12 @@ grow into a blog (stories, projects, thoughts) later. Hosted on Vercel.
 ## Goals & scope
 
 **v1 (this build):**
-- A single **landing page**: name + intro/bio (see "Landing copy" below) and a
-  **Projects** section.
+- **Dark theme** by default (not just system-preference): the page is dark
+  (near-black background, light text). Chosen so the hero portrait — a transparent
+  cut-out that fades to black — blends into the page intentionally.
+- A single **landing page**: a **hero portrait** of Jonathan (`public/portrait.webp`,
+  66KB, alpha-preserving WebP derived from the uploaded PNG), his name, the
+  intro/bio (see "Landing copy" below), and a **Projects** section.
 - **Projects** = public GitHub repos tagged with the opt-in topic **`showcase`**,
   rendered as cards (name + description). Each card links to a **per-project page**
   (`/projects/<repo>`) that renders the repo's full **README**.
