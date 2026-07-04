@@ -49,3 +49,28 @@ export function formatPostDate(iso: string): string {
   if (Number.isNaN(d.getTime())) return iso;
   return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
 }
+
+export interface PostYearGroup {
+  year: string;
+  posts: Post[];
+}
+
+export function groupPostsByYear(posts: Post[]): PostYearGroup[] {
+  const byYear = new Map<string, Post[]>();
+  for (const p of posts) {
+    const year = /^\d{4}/.test(p.date) ? p.date.slice(0, 4) : 'Undated';
+    const arr = byYear.get(year) ?? [];
+    arr.push(p);
+    byYear.set(year, arr);
+  }
+  return [...byYear.entries()]
+    .map(([year, ps]) => ({
+      year,
+      posts: [...ps].sort((a, b) => b.date.localeCompare(a.date)),
+    }))
+    .sort((a, b) => {
+      if (a.year === 'Undated') return 1;
+      if (b.year === 'Undated') return -1;
+      return b.year.localeCompare(a.year);
+    });
+}

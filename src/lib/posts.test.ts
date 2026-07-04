@@ -46,3 +46,27 @@ describe('formatPostDate', () => {
   it('formats ISO date', () => { expect(formatPostDate('2025-05-07')).toBe('May 7, 2025'); });
   it('passes through empty', () => { expect(formatPostDate('')).toBe(''); });
 });
+
+import { groupPostsByYear } from '@/lib/posts';
+
+describe('groupPostsByYear', () => {
+  const mk = (slug: string, date: string) => ({
+    slug, title: slug.toUpperCase(), date, sourceBlog: '', sourceUrl: '', excerpt: '',
+  });
+
+  it('groups by year, newest year and post first, Undated last', () => {
+    const groups = groupPostsByYear([
+      mk('x', '2024-01-01'),
+      mk('y', '2024-06-01'),
+      mk('z', '2022-03-01'),
+      mk('u', ''),
+    ]);
+    expect(groups.map(g => g.year)).toEqual(['2024', '2022', 'Undated']);
+    expect(groups[0].posts.map(p => p.slug)).toEqual(['y', 'x']);
+    expect(groups[2].posts.map(p => p.slug)).toEqual(['u']);
+  });
+
+  it('returns [] for no posts', () => {
+    expect(groupPostsByYear([])).toEqual([]);
+  });
+});
