@@ -17,3 +17,7 @@ next-env.d.ts
 .DS_Store
 *.log
 .superpowers/
+.env*
+
+# Playwright MCP artifacts
+.playwright-mcp/
