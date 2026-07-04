@@ -5,8 +5,7 @@
 
 ## Open
 
-_(none)_
-- [ ] L • P? • MDX collaborative blog (`content/posts/*.mdx` + `/posts/[slug]`) — deferred from v1
+- [ ] L • P? • MDX collaborative blog / stories (`content/posts/*.mdx` + `/posts/[slug]`) — deferred from v1. **Landing order: blogs/stories render ABOVE the Projects section** (bio → posts → projects).
 - [ ] M • P? • Real visual design pass (typography, spacing, project card polish) — deferred from v1
 
 ## Completed
