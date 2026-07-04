@@ -1,5 +1,5 @@
 ---
-title: "Untitled (2014-12-21)"
+title: "Christmas Message 2014"
 date: "2014-12-21"
 sourceBlog: "Greer Church Without Walls"
 sourceUrl: "https://greercww.blogspot.com/2014/12/122114christmas-we-will-have-recess.html"
@@ -12,7 +12,7 @@ We will have a recess from the ten commandments this week, as Christmas is comin
 
 Christmas is a special time of year, and for me it is a significant time spiritually. Christmas is my spiritual birthday. 41 years ago around this time I was sitting on my parents' bed my father was reading the scripture and kept seeing the baby Jesus knowing he was coming to earth to die… I, in my fertile 5 year old imagination, could even imagine them nailing an infant to a cross… This was distressing and I started to cry. My father, thankfully, had the wisdom to recognize that I was under conviction. Now at 5 years old the worst thing I probably had ever done was tell a lie… oh wait.. that’s one of the ten commandments… oops…
 
-So I needed conviction and deserved condemnation … I know some pope don’t like to think that children are culpable for their sins… well I think that until they hear the call of God they are not, but once they know right from wrong, what they are supposed to do from what they aren’t supposed to do.. once they learn what NO means… then there is some level of responsibility.
+So I needed conviction and deserved condemnation … I know some people don’t like to think that children are culpable for their sins… well I think that until they hear the call of God they are not, but once they know right from wrong, what they are supposed to do from what they aren’t supposed to do.. once they learn what NO means… then there is some level of responsibility.
 
 Anyhow, my father recognized it for what it was and led me in a simple prayer asking Jesus into my heart! I was saved and that began an interesting life of thrills romance and adventure now thrills can come from scary things.. it’s a thrill when God shows himself strong on your behalf, romance comes at a price you have to work at it, and adventure well… sometimes adventures aren’t fun… but they are always adventuresome!
 
