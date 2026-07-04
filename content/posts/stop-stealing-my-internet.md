@@ -6,7 +6,7 @@ sourceUrl: "https://my-internet-is-down.blogspot.com/2009/03/stop-stealing-my-in
 excerpt: "STOP Stealing My Internet Originally uploaded by Kymberlie R. McGuire Next blog will be about securing wireless LANs so you don't have to resort to this! Though"
 ---
 
-[![](/posts/stop-stealing-my-internet/1.jpg)](http://www.flickr.com/photos/kymberlie/17461794/ "photo sharing")
+![](/posts/stop-stealing-my-internet/1.jpg)
 [STOP Stealing My Internet](http://www.flickr.com/photos/kymberlie/17461794/)
 Originally uploaded by [Kymberlie R. McGuire](http://www.flickr.com/people/kymberlie/)
 

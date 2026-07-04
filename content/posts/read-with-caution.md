@@ -48,15 +48,15 @@ Now I want you to consider some of the headlines of the day  I'll go to.. hmm CN
 
 Here is a screenshot from Fox News headlines section:
 
-[![](/posts/read-with-caution/1.png)](/posts/read-with-caution/1.png)
+![](/posts/read-with-caution/1.png)
 
 and let's not leave out CNN
 
-[![](/posts/read-with-caution/2.png)](/posts/read-with-caution/2.png)
+![](/posts/read-with-caution/2.png)
 
 and just for fun ABC:
 
-[![](/posts/read-with-caution/3.png)](/posts/read-with-caution/3.png)
+![](/posts/read-with-caution/3.png)
 
 There are a wide variety of stories here.. so. how do any of these tie in with Romans Chapter 12?
 

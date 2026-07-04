@@ -14,7 +14,7 @@ I say that the pastor may not be a sheep, but more of a sheep dog... not the kin
 
 The Great Pyrenees Dog is a perfect example:
 
-[![](/posts/pastor-shepard-or-sheep-dog/1.jpg)](/posts/pastor-shepard-or-sheep-dog/1.jpg)
+![](/posts/pastor-shepard-or-sheep-dog/1.jpg)
 
 These dogs are raised as part of the flock. They love the sheep they are with, yet if a wolf shows up, they are terrible in their response, they will fight to the death to protect the sheep.
 
