@@ -13,7 +13,7 @@ grow into a blog (stories, projects, thoughts) later. Hosted on Vercel.
 ## Goals & scope
 
 **v1 (this build):**
-- A single **landing page**: name/handle, a short editable intro line, and a
+- A single **landing page**: name + intro/bio (see "Landing copy" below) and a
   **Projects** section.
 - **Projects** = public GitHub repos tagged with the opt-in topic **`showcase`**,
   rendered as cards (name + description). Each card links to a **per-project page**
@@ -28,6 +28,21 @@ grow into a blog (stories, projects, thoughts) later. Hosted on Vercel.
 
 **Non-goals:** auth, a CMS, comments, analytics, or any write path. Read-only,
 statically generated.
+
+## Landing copy (v1)
+
+Intro/bio on the landing (Jonathan's voice, first person, no em-dashes; editable):
+
+> I'm Jonathan Wagner. I started programming in 1980, at twelve, on a TRS-80
+> Model 1 (Level 1, 4K of RAM). I learned BASIC from a book and taught myself to
+> type with one hand while I held the book in the other.
+>
+> I've been learning ever since. I remember when neural nets were brand new and
+> AI was a pipe dream, when the internet was gopher-net and the World Wide Web
+> didn't exist yet. Languages, protocols, anything and everything.
+>
+> Now LLMs let me jump straight from an idea to a made thing. This is where I keep
+> the projects, stories, and thoughts.
 
 ## Tech stack
 
@@ -116,12 +131,14 @@ after the change.
 
 ## Future / deferred
 
-- **Blog:** MDX posts under `content/`, a `/posts/[slug]` route reusing the
-  markdown renderer; index on the landing.
+- **Blog:** MDX posts under `content/posts/*.mdx` with frontmatter (title, date,
+  tags), a `/posts/[slug]` route reusing the markdown renderer, and an index on
+  the landing. Entries are **authored collaboratively** (Claude creates the MDX
+  file, Jonathan steers the content) — no CMS.
 - **Design pass:** typography, layout, dark mode.
 - Optional: on-demand ISR via a GitHub webhook (instant updates) instead of hourly.
 
 ## Open questions
 
-None blocking. Intro copy is a placeholder to be edited; design is deliberately
-minimal for v1.
+None blocking. Intro copy is set (see "Landing copy", editable anytime); design
+is deliberately minimal for v1.
