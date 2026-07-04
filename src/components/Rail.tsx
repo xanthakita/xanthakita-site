@@ -1,10 +1,10 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import type { Post, PostYearGroup } from '@/lib/posts';
+import type { PostYearGroup } from '@/lib/posts';
 import type { Project } from '@/lib/types';
 
 interface RailProps {
@@ -33,15 +33,20 @@ export function Rail({ name, postGroups, postCount, projects }: RailProps) {
     return y ? new Set([y]) : new Set();
   });
 
-  useEffect(() => {
+  // Auto-expand the active item's group when the route changes, without
+  // collapsing anything the user opened manually. Adjusting state during
+  // render (rather than in an effect) per
+  // https://react.dev/reference/react/useState#storing-information-from-previous-renders
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname);
     if (activePost) {
       setWritingsOpen(true);
       const y = yearOf(activePost);
       if (y) setOpenYears(prev => (prev.has(y) ? prev : new Set(prev).add(y)));
     }
     if (activeProject) setProjectsOpen(true);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [activePost, activeProject]);
+  }
 
   const toggleYear = (year: string) =>
     setOpenYears(prev => {
