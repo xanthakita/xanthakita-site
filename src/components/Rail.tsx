@@ -89,7 +89,7 @@ export function Rail({ name, postGroups, postCount, projects }: RailProps) {
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/portrait.webp"
-            alt={name}
+            alt=""
             width={48}
             height={48}
             className="h-12 w-12 rounded-full object-cover"
