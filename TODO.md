@@ -5,8 +5,12 @@
 
 ## Open
 
-- [ ] S • P? • Define the project: what `xanthakita` is (purpose, audience, tech stack)
+- [ ] M • P? • Real visual design pass (typography, spacing, card polish) — deferred from v1
 
 ## Completed
 
 - [x] S • P1 • Scaffold repo (git, TODO.md, SessionStart hook, README, .gitignore)
+- [x] S • P1 • Define the project: personal landing + GitHub `showcase` topic-driven projects site (Next.js/Vercel, dark theme)
+- [x] XL • P1 • Build + ship xanthakita.com v1 (7 TDD tasks; Vercel deploy; email-safe GoDaddy DNS; live at https://xanthakita.com) — see XAN-001
+- [x] S • P1 • Rotate Vercel `GITHUB_TOKEN` to a fine-grained read-only public-repo PAT (all 3 envs, redeployed) — see XAN-002
+- [x] S • P1 • Tag 7 public repos with the `showcase` topic (smoke-simulation-tool, XanthAkita-Inu-Coin, ukdb_screenscrape, flatten, dev_ideas, mypetid, toque); Projects section live
