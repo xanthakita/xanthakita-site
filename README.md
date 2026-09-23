@@ -19,6 +19,7 @@ The right pane is a reading window. It shows my bio by default, and swaps to a s
 - **The rail** (`src/components/Rail.tsx`) is the only client component. It reads the current path to highlight the active item and auto-expand its group and year. Manual accordion toggles are preserved across navigation. The server layout fetches all data and passes plain props in, so the rail does no client-side fetching.
 - **Writings** live as Markdown files in `content/posts/` with `gray-matter` frontmatter (`title`, `date`, `sourceBlog`, `sourceUrl`, `excerpt`). They render through a sanitizing `Markdown` component (`react-markdown` + `remark-gfm`) that strips raw HTML, so imported content cannot inject scripts.
 - **Projects** are pulled live from the GitHub REST API: public, non-fork, non-archived repos of the `xanthakita` user that carry the `showcase` topic, sorted by last update. Each project page renders that repo's README in the pane. Data revalidates hourly (ISR), and a fetch failure degrades to an empty list rather than breaking the site.
+- **Contact form** at the foot of the home page (`src/components/ContactForm.tsx`, the second client component). It posts to a server action (`src/app/actions/contact.ts`) that validates, drops honeypot hits, rate-limits five messages an hour per client, and sends one email through Resend with reply-to set to the visitor. The logic lives in `src/lib/contact.ts` and `src/lib/contactAction.ts` as pure functions with injected dependencies, so it is tested without a network. Needs `RESEND_API_KEY` (provisioned by the Vercel Resend integration), `CONTACT_TO` and `CONTACT_FROM`.
 - **Tests:** Vitest with Testing Library in jsdom — unit tests for the post loader and year grouping, behavior tests for the rail.
 - **Hosting:** Vercel, with the custom domain served through GoDaddy DNS.
 
@@ -33,9 +34,13 @@ src/
       posts/[slug]/page.tsx     # a writing, rendered in the pane
       projects/[slug]/page.tsx  # a project README, rendered in the pane
     layout.tsx                  # root html/body, fonts, metadata
+    actions/contact.ts          # server action behind the contact form
   components/
     Rail.tsx                    # left-rail accordion nav (client)
+    ContactForm.tsx             # contact form (client)
   lib/
+    contact.ts                  # contact validation, email, rate limiter, Resend call
+    contactAction.ts            # the action's handler with injected deps
     posts.ts                    # read Markdown posts + group by year
     github.ts                   # fetch showcase repos + READMEs
     markdown.tsx                # sanitizing Markdown renderer
@@ -55,7 +60,7 @@ npm run build    # production build
 npm run lint     # eslint
 ```
 
-Set `GITHUB_TOKEN` in `.env.local` to raise the GitHub API rate limit while developing (see `.env.example`). Without it the site still builds; the Projects list just falls back to empty if the anonymous rate limit is exhausted.
+Set `RESEND_API_KEY`, `CONTACT_TO` and `CONTACT_FROM` in `.env.local` to send real mail from the contact form; without them a submission validates but the send fails with a form-level error. Set `GITHUB_TOKEN` in `.env.local` to raise the GitHub API rate limit while developing (see `.env.example`). Without it the site still builds; the Projects list just falls back to empty if the anonymous rate limit is exhausted.
 
 ## Featuring a project
 
