@@ -9,6 +9,8 @@
 
 ## Completed
 
+- [x] M • P1 • Contact form + "Work with me" section on the home page (consulting, systems/process reviews, fractional CTO); Resend via the Vercel marketplace, server action, honeypot, rate limit, Vitest coverage — see XAN-006
+
 - [x] S • P1 • Connect Vercel project to GitHub (`xanthakita/xanthakita-site`, `main`) so a push auto-deploys to prod; no more manual `vercel --prod`
 - [x] L • P1 • Master-detail redesign: left rail (writings-by-year + projects accordion) + reading pane; revised bio (Xanthakita origin + family); real README; merged to main; published public repo xanthakita/xanthakita-site tagged `showcase`; deployed to prod — see XAN-004
 - [x] S • P1 • Scaffold repo (git, TODO.md, SessionStart hook, README, .gitignore)

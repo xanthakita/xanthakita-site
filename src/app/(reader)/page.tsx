@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import { siteConfig } from '@/site.config';
+import { ContactForm } from '@/components/ContactForm';
+import { submitContact } from '@/app/actions/contact';
 
 export default function Home() {
   return (
@@ -23,6 +25,17 @@ export default function Home() {
         <p>Life filled in around the code. I&apos;ve been married since 1989, and my wife and I raised three sons: Kenneth, Riley, and Jesse.</p>
         <p>Now LLMs let me jump straight from an idea to a made thing. This is where I keep the projects, stories, and thoughts.</p>
       </div>
+
+      <section id="work-with-me" className="mt-14 border-t border-neutral-800 pt-10">
+        <h2 className="text-2xl font-bold tracking-tight text-neutral-50">Work with me</h2>
+        <div className="mt-4 space-y-4 text-lg leading-relaxed text-neutral-300">
+          <p>Forty-some years of building things has left me with a habit of looking at how an organization actually runs, not how the org chart says it does. I review systems and procedures for organizations that need a second set of eyes: where the data really lives, what breaks when the one person who knows leaves, which processes exist because they were needed once and nobody has asked since. You get a plain-language report and a short list of what to fix first.</p>
+          <p>Beyond reviews, I take on consulting engagements and serve as a fractional CTO for teams that need senior technical leadership without a full-time hire. Tell me a little about your organization and what you are up against, and I will get back to you.</p>
+        </div>
+        <div className="relative mt-8">
+          <ContactForm action={submitContact} />
+        </div>
+      </section>
     </div>
   );
 }
